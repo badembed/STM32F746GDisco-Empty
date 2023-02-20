@@ -1,0 +1,3 @@
+/home/alex/tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc -mcpu=cortex-m7 -mlittle-endian -mthumb -g -I./Inc -DSTM32F746xx -c ./Src/main.c -o ./Src/main.o
+/home/alex/tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc -mcpu=cortex-m7 -mlittle-endian -mthumb -g -I./Inc -c ./startup_stm32f746xx.s -o ./startup_stm32f746xx.o
+/home/alex/tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc -mcpu=cortex-m7 -mlittle-endian -mthumb -T./STM32F746NGHx_FLASH.ld -Wl,--gc-section ./Src/main.o ./startup_stm32f746xx.o -o main.elf
